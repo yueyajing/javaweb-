@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>自适应页面</title>
+    <style>
+        /* 设置网格布局 */
+        body {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+            height: 100vh; /* 设置高度为视窗高度 */
+        }
+
+        /* 设置四个网格区域 */
+        .grid-item {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        /* 媒体查询，适应不同窗口大小 */
+        @media screen and (max-width: 768px) {
+            body {
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.2.1/echarts.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<div class="grid-item" id="container1">第一部分</div>
+<div class="grid-item" id="container2">第二部分</div>
+<div class="grid-item" id="container3">第三部分</div>
+<div class="grid-item" id="container4">第四部分</div>
+
+
+<script type="text/javascript">
+    var isData1 = true;
+    var a1 = [1,2,3,4,5,6,7];
+    var a2 = [80, 150, 100, 130, 90, 200, 160];
+    var b = ["直接访问","邮件营销","联盟广告","视频广告","搜索引擎"];
+    var c = [
+        { name: "直接访问", value: 235 },
+        { name: "邮件营销", value: 274 },
+        { name: "联盟广告", value: 310 },
+        { name: "视频广告", value: 335 },
+        { name: "搜索引擎", value: 400 }
+    ];
+    var data = []; // 用于存储饼图数据
+    for (var i = 0; i < c.length; i++) {
+        var obj = c[i];
+        data.push({
+            value: obj.value,
+            name: obj.name
+        });
+    }
+    //[5, 20, 36, 10, 10, 20]
+    // 基于准备好的dom，初始化柱状图实例
+    var myChart1 = echarts.init(document.getElementById('container1'),'dark');
+
+    setInterval(function() {
+        var data = isData1 ? a1 : a2;
+        myChart1.setOption({
+            series: [{
+                data: data
+            }]
+        });
+        isData1 = !isData1;
+    }, 5000);
+    // 指定图表的配置项和数据
+    var option1 = {
+        title: {
+            text: '柱状图'
+        },
+        tooltip: {},
+        legend: {
+            data:['销量']
+        },
+        xAxis: {
+            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子","帽子"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: a1
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示柱状图
+    myChart1.setOption(option1);
+
+    // 基于准备好的dom，初始化饼状图实例
+    var myChart2 = echarts.init(document.getElementById('container2'),'light');
+
+    // 指定图表的配置项和数据
+    var option2 = {
+        title: {
+            text: '饼状图'
+        },
+        tooltip: {},
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            radius: '50%',
+            emphasis: {
+                itemStyle: {
+                    // 高亮时点的颜色
+                    color: 'red'
+                },
+                label: {
+                    show: true,
+                    // 高亮时标签的文字
+                    formatter: '高亮时显示的标签内容'
+                }
+            },
+            data: data
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示饼状图
+    myChart2.setOption(option2);
+
+</script>
+</body>
+</html>

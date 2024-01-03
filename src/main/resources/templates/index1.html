@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>登录页面</title>
+</head>
+<body>
+<form id="login-form">
+    <label for="username">账户：</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">密码：</label>
+    <input type="password" id="password" name="password"><br>
+    <button type="submit">登录</button>
+</form>
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+        $('#login-form').submit(function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+
+            // 获取表单数据
+            var formData = {
+                username: $('#username').val(),
+                password: $('#password').val()
+            };
+
+            // 发送 POST 请求给后端
+            $.ajax({
+                type: 'POST',
+                url: '/login11',
+                data: formData,
+                success: function(response) {
+                    alert(response.message); // 处理后端返回的数据
+                },
+                error: function(xhr, status, error) {
+                    console.log(xhr); // 处理错误
+                }
+            });
+        });
+    });
+
+</script>

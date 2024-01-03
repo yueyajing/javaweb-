@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.example.jkapi.MyBatis.UserDao">
+    <!--select查询语句-->
+    <select id="getUserList" resultType="com.example.jkapi.MyBatis.User1">
+        select * from table2
+    </select>
+    <select id="findAll" resultType="com.example.jkapi.MyBatis.User1">
+        SELECT * FROM table2;
+    </select>
+    <insert id="insert" parameterType="com.example.jkapi.MyBatis.User1">
+        INSERT INTO table2 (name,workcode,code,xx) VALUES (#{name},#{score},#{age},#{gender});
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM table2 WHERE id = #{id};
+    </delete>
+</mapper>

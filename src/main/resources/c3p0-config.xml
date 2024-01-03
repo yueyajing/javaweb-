@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<c3p0-config>
+    <named-config name="localhost">
+        <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+        <property name="jdbcUrl">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <property name="user">C##BS001</property>
+        <property name="password">123456</property>
+        <property name="acquireIncrement">5</property>
+        <property name="initialPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxPoolSize">200</property>
+        <property name="maxIdleTime">3600</property>
+        <property name="testConnectionOnCheckin">false</property>
+        <property name="testConnectionOnCheckout">true</property>
+        <property name="checkoutTimeout">5000</property>
+    </named-config>
+
+    <named-config name="local">
+        <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+        <property name="jdbcUrl">jdbc:oracle:thin:@localhost:1521:orcl</property>
+        <property name="user">system</property>
+        <property name="password">123456</property>
+        <property name="checkoutTimeout">5000</property>
+    </named-config>
+    <named-config name="mid_hr">
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="jdbcUrl">jdbc:sqlserver://10.1.200.18:1433;database=ecology_db</property>
+        <property name="user">sa</property>
+        <property name="password">tuopuoa</property>
+        <!-- 连接池参数 -->
+        <property name="initialPoolSize">10</property>
+        <property name="maxActive" value="100" />
+        <!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+        <property name="maxIdle" value="50" />
+        <!-- 最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+        <property name="minIdle" value="10" />
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="checkoutTimeout">5000</property>
+    </named-config>
+
+
+    <named-config name="physql">//
+        <property name="user">root@tp</property>
+        <property name="password">Top@0574</property>
+        <property name="jdbcUrl">jdbc:mysql://6.6.6.16:54321/reportdb?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;serverTimezone=CST</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">20</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">25</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">5</property>
+        <property name="checkoutTimeout">100000</property>
+        <!--最大空闲时间，3600秒内未使用则连接被丢弃。若为0则永不丢弃。默认值: 0 -->
+        <property name="maxIdleTime">3600</property>
+    </named-config>
+
+
+    <named-config name="woqutech">
+        <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+        <property name="jdbcUrl">jdbc:oracle:thin:@10.1.200.102:1521:woqutech2</property>
+        <property name="user">ecology</property>
+        <property name="password">ecology</property>
+        <property name="acquireIncrement">5</property>
+        <property name="initialPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxPoolSize">200</property>
+        <property name="maxIdleTime">3600</property>
+        <property name="testConnectionOnCheckin">false</property>
+        <property name="testConnectionOnCheckout">true</property>
+        <property name="checkoutTimeout">5000</property>
+    </named-config>
+
+    <named-config name="OA">
+        <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+        <property name="jdbcUrl">jdbc:oracle:thin:@6.6.6.166:1521:ecology2</property>
+        <property name="user">ecology</property>
+        <property name="password">ecology</property>
+        <property name="acquireIncrement">5</property>
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">200</property>
+        <property name="maxIdleTime">3600</property>
+        <property name="testConnectionOnCheckin">false</property>
+        <property name="testConnectionOnCheckout">true</property>
+        <property name="checkoutTimeout">100000</property>
+    </named-config>
+
+    <named-config name="XKP">
+        <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
+        <property name="jdbcUrl">jdbc:oracle:thin:@10.1.200.86:1521:ECARD</property>
+        <property name="user">CCENSE</property>
+        <property name="password">NewCapeC</property>
+        <property name="acquireIncrement">5</property>
+        <property name="initialPoolSize">10</property>
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">20</property>
+        <property name="maxIdleTime">3600</property>
+        <property name="testConnectionOnCheckin">false</property>
+        <property name="testConnectionOnCheckout">true</property>
+        <property name="checkoutTimeout">100000</property>
+    </named-config>
+
+
+    <named-config name="DH">
+        <property name="user">mysql</property>
+        <property name="password">S7EuWjGM</property>
+        <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_brm?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">20</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">250</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">5</property>
+        <property name="checkoutTimeout">100000</property>
+        <!--最大空闲时间，3600秒内未使用则连接被丢弃。若为0则永不丢弃。默认值: 0 -->
+        <property name="maxIdleTime">3600</property>
+    </named-config>
+
+    <named-config name="DHMJ">
+        <property name="user">mysql</property>
+        <property name="password">S7EuWjGM</property>
+        <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_accesscontrol?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">20</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">25</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">5</property>
+        <property name="checkoutTimeout">100000</property>
+        <!--最大空闲时间，3600秒内未使用则连接被丢弃。若为0则永不丢弃。默认值: 0 -->
+        <property name="maxIdleTime">3600</property>
+    </named-config>
+
+    <named-config name="DHXF">
+        <property name="user">mysql</property>
+        <property name="password">S7EuWjGM</property>
+        <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_consume?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">20</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">25</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">5</property>
+        <property name="checkoutTimeout">100000</property>
+        <!--最大空闲时间，3600秒内未使用则连接被丢弃。若为0则永不丢弃。默认值: 0 -->
+        <property name="maxIdleTime">3600</property>
+    </named-config>
+
+    <named-config name="DHKQ">
+        <property name="user">mysql</property>
+        <property name="password">S7EuWjGM</property>
+        <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_attendance?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">5</property>
+        <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">20</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">25</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">5</property>
+        <property name="checkoutTimeout">100000</property>
+        <!--最大空闲时间，3600秒内未使用则连接被丢弃。若为0则永不丢弃。默认值: 0 -->
+        <property name="maxIdleTime">3600</property>
+    </named-config>
+
+    <named-config name="HR">
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="jdbcUrl">jdbc:sqlserver://192.1.3.45\sql2008;databaseName=V10_HR</property>
+        <property name="user">sa</property>
+        <property name="password">tuopuhr</property>
+        <!-- 连接池参数 -->
+        <property name="initialPoolSize">10</property>
+        <property name="maxActive" value="100" />
+        <!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+        <property name="maxIdle" value="50" />
+        <!-- 最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+        <property name="minIdle" value="10" />
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="checkoutTimeout">100000</property>
+    </named-config>
+</c3p0-config>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>Vite App</title>
+  </head>
+  <body>
+  <form action="">
+    First name:
+    <input type="text" name="FirstName" value="Mickey"><br>
+    Last name:
+    <input type="text" name="LastName" value="Mouse"><br>
+    <input type="submit" value="提交">
+  </form>
+
+
+
+  <div id="root">
+    <h1>Hello！</h1>
+    <div class="d1">
+      <div class="d2">
+        <h3>111</h3>
+        <div class="row">
+          <span>yhm</span>
+          <input type="text" id="username">
+        </div>
+        <div class="row">
+          <span>yhm</span>
+          <input type="password" id="password">
+
+        </div>
+        <div class="row">
+          <span>yhm</span>
+          <button class="bu1" id="submit">000</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
+<script>
+  $("form").submit(function(){
+    //alert("提交");
+    return "index1"
+  });
+</script>

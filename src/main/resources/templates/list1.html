@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">-->
+    <title>Title</title>
+</head>
+<body>
+<div class="container" id="t3" th:href="@{/list}">
+    <h2>基础表格</h2>
+    <p>.table 类来设置基础表格的样式:</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>1</th>
+            <th>2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user:${User}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user['name']}"></td>
+            <td th:text="${user['sex']}"></td>
+            <td th:text="${user['birth']}"></td>
+            <td>
+                <button id="but1" type="button" class="btn btn-primary">编辑</button>
+                <button id="but2" type="button" class="btn btn btn-danger">删除</button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+    $(function () {
+        $('#but1').click(function () {
+            $.ajax({
+                type:"post",
+                //参数在url中，载荷是查询字符串，就是没有请求体
+                // url:"paramPost?name=jack&age=25",
+                url:"paramPost",
+                //参数在请求体中，js对象和json对象都可以提交，默认是提交表单数据
+                data:{name:"jack",
+                    age:15
+                },
+                dataType:"json",
+                success: function(data){
+                    console.log(data);
+                    alert(data);
+                    alert(data.sss);
+                }
+            });
+            //return false;
+        });
+    });
+
+</script>
+</body>
+</html>

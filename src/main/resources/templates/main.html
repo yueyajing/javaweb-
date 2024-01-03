@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>主页</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h2 {
+      margin: 0;
+    }
+    .header a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    .header a:hover {
+      color: #fc0;
+    }
+    .container {
+      display: flex;
+      height: 92vh;
+    }
+    .sidebar {
+      background-color: #eee;
+      flex-basis: 200px;
+      padding: 10px;
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    nav a:hover {
+      background-color: #fc0;
+      color: #fff;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 10px;
+      text-align: justify;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var section1 = document.querySelector("#section1");
+      var section2 = document.querySelector("#section2");
+      var section3 = document.querySelector("#section3");
+      document.querySelector("nav a:first-child").addEventListener("click", function() {
+        section1.style.display = "block";
+        nnn.style.display = "block";
+        form1.style.display = "none";
+        section2.style.display = "none";
+        section3.style.display = "none";
+        se1.style.display = "block";
+        se2.style.display = "none";
+        se3.style.display = "none";
+        // t3.style.display = "none";
+      });
+      document.querySelector("nav a:nth-child(2)").addEventListener("click", function() {
+        section1.style.display = "none";
+        nnn.style.display = "none";
+        form1.style.display = "block";
+        section2.style.display = "block";
+        section3.style.display = "none";
+        se1.style.display = "none";
+        se2.style.display = "block";
+        se3.style.display = "none";
+        t3.style.display = "block";
+      });
+      document.querySelector("nav a:last-child").addEventListener("click", function() {
+        section1.style.display = "none";
+        nnn.style.display = "none";
+        form1.style.display = "block";
+        section2.style.display = "none";
+        section3.style.display = "block";
+        se1.style.display = "none";
+        se2.style.display = "none";
+        se3.style.display = "block";
+        t3.style.display = "block";
+
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="header">
+  <h2 id="username_h2" th:text="欢迎+${username}+登录"></h2>
+  <a href="/logout">退出</a>
+</div>
+<div class="container">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#" th:href="@{/table}">列表</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+  <div class="sidebar">
+    <nav>
+      <a href="#section1">导航1</a>
+      <a href="#section2" th:href="@{/table}">导航2</a>
+      <a href="#section3" th:href="@{/list}">导航3</a>
+    </nav>
+  </div>
+  <div class="content">
+    <h1>欢迎来到千代页面</h1>
+    <p>这是一个简单的千代页面示例代码。</p>
+    <p>请点击左侧导航查看不同的信息。</p>
+    <h3>页面标题</h3>
+
+    <div id="nnn">
+      <p>
+        aaaa
+      </p>
+      <p>
+        bbbc
+      </p>
+      <div id="sectiona">
+        <a href="http://10.1.200.39:8080/webroot/decision/view/report?viewlet=ecard%252F%25E8%2580%2583%25E5%258B%25A4%25E6%259F%25A5%25E8%25AF%25A2.cpt&ref_t=design&op=write&ref_c=9530eda0-d4f6-41c8-a143-72f1745e747a" >考勤</a>
+<br>        
+<a href="http://10.1.200.39:8080/webroot/decision/view/report?viewlet=hrmresource%252F%25E4%25BA%25BA%25E4%25BA%258B%25E6%258A%25A5%25E8%25A1%25A8%252F%25E4%25BA%25BA%25E4%25BA%258B%25E6%258A%25A5%25E8%25A1%25A8%25E6%259F%25A5%25E8%25AF%25A2%25E4%25BA%25BA%25E5%2591%2598_v5_%25E5%25A4%258D%25E9%2580%2589.cpt&ref_t=design&op=write&ref_c=d2df9e84-2409-4829-8554-b2ecefcbf503">人员</a>
+      </div>
+    </div>
+
+    <div id="form1" style="display: none;">
+      <form action="paramPost1" method="post">
+        姓名：<input type="text" name="name" required="required"><br>
+        年龄：<input type="text" name="age" required="required"><br>
+        分数：<input type="text" name="score"><br>
+        <input type="submit">
+      </form>
+    </div>
+    <div id="t3" style="display: none;" th:href="@{/table}">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>1</th>
+                <th>2</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user:${User}">
+                <td th:text="${user['id']}"></td>
+                <td th:text="${user['name']}"></td>
+                <td th:text="${user['sex']}"></td>
+                <td th:text="${user['birth']}"></td>
+                <td>
+                    <button class="bt_edit">编辑</button>
+                    <button class="bt_delete">删除</button>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <p id="section1">
+      这里是导航1的内容。
+    </p>
+    <p id="section2" style="display: none;">
+      这里是导航2的内容。
+    </p>
+    <p id="section3" style="display: none;">
+        3
+    </p>
+    <button><a href="/paramGet?name=tom&age=15" target="_blank">点我发送get请求</a></button>
+    <button id="bbb1">
+      按钮
+    </button>
+  </div>
+
+
+
+
+    <script>
+    $(function () {
+      $('#bbb1').click(function () {
+        $.ajax({
+          type:"post",
+          //参数在url中，载荷是查询字符串，就是没有请求体
+          // url:"paramPost?name=jack&age=25",
+          url:"paramPost",
+          //参数在请求体中，js对象和json对象都可以提交，默认是提交表单数据
+          data:{name:"jack",
+            age:15
+          },
+          dataType:"json",
+          success: function(data){
+            console.log(data);
+            alert(data);
+            alert(data.sss);
+          }
+        });
+        //return false;
+      });
+    });
+
+
+    $(
+        function (){
+            $('#form1').submit(
+                function (){
+                                    // 2.阻止表单的默认行为
+                    // var formdata = $('#form1').serialize()             // 3. 快速获取表单中的数据
+                    $.ajax({
+                        method:'POST',
+                        url: '/show',
+                        data: $(this).serialize(),
+                        success:function (res){
+                            alert(1);
+                        }
+                    })
+                    return false;
+                }
+            )
+        }
+    )
+
+
+
+
+
+  </script>
+</div>
+</body>
+</html>

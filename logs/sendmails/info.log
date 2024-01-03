@@ -1,0 +1,38 @@
+2023-10-16 15:07:10,401 [restartedMain] INFO  [com.example.jkapi.JkapiApplication] StartupInfoLogger.java:55 - Starting JkapiApplication using Java 1.8.0_102 on DESKTOP-6IB53SL with PID 10564 (D:\JAVA\IDEA\work\jkapi\target\classes started by 000 in D:\JAVA\IDEA\work\jkapi)
+2023-10-16 15:07:10,516 [restartedMain] INFO  [com.example.jkapi.JkapiApplication] SpringApplication.java:662 - No active profile set, falling back to default profiles: default
+2023-10-16 15:07:10,614 [restartedMain] INFO  [o.s.boot.devtools.restart.ChangeableUrls] DeferredLog.java:255 - The Class-Path manifest attribute in D:\Maven\localRepository\com\mchange\c3p0\0.9.5.2\c3p0-0.9.5.2.jar referenced one or more files that do not exist: file:/D:/Maven/localRepository/com/mchange/c3p0/0.9.5.2/mchange-commons-java-0.2.11.jar
+2023-10-16 15:07:10,615 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-16 15:07:10,615 [restartedMain] INFO  [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] DeferredLog.java:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-16 15:07:12,517 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8815 (http)
+2023-10-16 15:07:12,535 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8815"]
+2023-10-16 15:07:12,536 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-10-16 15:07:12,536 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2023-10-16 15:07:12,630 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-10-16 15:07:12,631 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:289 - Root WebApplicationContext: initialization completed in 2015 ms
+2023-10-16 15:07:12,884 [restartedMain] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-16 15:07:13,037 [restartedMain] INFO  [o.s.b.a.web.servlet.WelcomePageHandlerMapping] WelcomePageHandlerMapping.java:53 - Adding welcome page: class path resource [static/index.html]
+2023-10-16 15:07:13,298 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:58 - LiveReload server is running on port 35729
+2023-10-16 15:07:13,317 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8815"]
+2023-10-16 15:07:13,349 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8815 (http) with context path ''
+2023-10-16 15:07:13,360 [restartedMain] INFO  [com.example.jkapi.JkapiApplication] StartupInfoLogger.java:61 - Started JkapiApplication in 3.954 seconds (JVM running for 10.424)
+2023-10-16 15:07:45,897 [http-nio-8815-exec-1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-16 15:07:45,897 [http-nio-8815-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
+2023-10-16 15:07:45,898 [http-nio-8815-exec-1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 1 ms
+2023-10-16 15:09:23,466 [http-nio-8815-exec-7] WARN  [o.s.w.s.m.support.DefaultHandlerExceptionResolver] AbstractHandlerExceptionResolver.java:207 - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required Object parameter 'param' is not present]
+2023-10-16 15:11:05,522 [http-nio-8815-exec-2] WARN  [o.s.w.s.m.support.DefaultHandlerExceptionResolver] AbstractHandlerExceptionResolver.java:207 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2023-10-16 15:29:37,633 [Thread-6] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2023-10-16 15:29:37,717 [restartedMain] INFO  [com.example.jkapi.JkapiApplication] StartupInfoLogger.java:55 - Starting JkapiApplication using Java 1.8.0_102 on DESKTOP-6IB53SL with PID 10564 (D:\JAVA\IDEA\work\jkapi\target\classes started by 000 in D:\JAVA\IDEA\work\jkapi)
+2023-10-16 15:29:37,718 [restartedMain] INFO  [com.example.jkapi.JkapiApplication] SpringApplication.java:662 - No active profile set, falling back to default profiles: default
+2023-10-16 15:29:38,084 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:108 - Tomcat initialized with port(s): 8815 (http)
+2023-10-16 15:29:38,085 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8815"]
+2023-10-16 15:29:38,086 [restartedMain] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2023-10-16 15:29:38,086 [restartedMain] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.44]
+2023-10-16 15:29:38,107 [restartedMain] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2023-10-16 15:29:38,108 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] ServletWebServerApplicationContext.java:289 - Root WebApplicationContext: initialization completed in 386 ms
+2023-10-16 15:29:38,172 [restartedMain] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2023-10-16 15:29:38,185 [restartedMain] INFO  [o.s.b.a.web.servlet.WelcomePageHandlerMapping] WelcomePageHandlerMapping.java:53 - Adding welcome page: class path resource [static/index.html]
+2023-10-16 15:29:38,256 [restartedMain] INFO  [o.s.b.d.autoconfigure.OptionalLiveReloadServer] OptionalLiveReloadServer.java:58 - LiveReload server is running on port 35729
+2023-10-16 15:29:38,264 [restartedMain] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8815"]
+2023-10-16 15:29:38,291 [restartedMain] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:220 - Tomcat started on port(s): 8815 (http) with context path ''
+2023-10-16 15:29:38,294 [restartedMain] INFO  [com.example.jkapi.JkapiApplication] StartupInfoLogger.java:61 - Started JkapiApplication in 0.609 seconds (JVM running for 1355.358)
+2023-10-16 15:29:38,296 [restartedMain] INFO  [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] ConditionEvaluationDeltaLoggingListener.java:63 - Condition evaluation unchanged

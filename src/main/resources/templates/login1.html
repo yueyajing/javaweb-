@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<!--    <style>-->
+<!--        body {-->
+<!--            background: url("拓普1.jpg") no-repeat center center fixed;-->
+<!--            -webkit-background-size: cover;-->
+<!--            -moz-background-size: cover;-->
+<!--            -o-background-size: cover;-->
+<!--            background-size: cover;-->
+<!--            background-color: rgba(255, 255, 255, 0.5);-->
+<!--        }-->
+<!--    </style>-->
+
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-info text-white">用户登录</div>
+                <div class="card-body">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="username">用户名：</label>
+                            <input type="text" id="username" name="username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码：</label>
+                            <input type="password" id="password" name="password" class="form-control">
+                        </div>
+                        <div class="form-group1">
+                            <label for="password">验证码：</label>
+                            <input type="text" maxlength="4" id="code" name="code"  placeholder="请输入验证码"  />
+                            <img src="/identifyImage" onclick="this.src='/identifyImage?d='+new Date()*1" />
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </form>
+                    <div id="msg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<form>
+    <input type="text" name="username" value="${userInfo['username']}" />
+    <input type="password" name="password" value="${userInfo['password']}" />
+    <button type="submit">提交</button>
+</form>-->
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script>
+    $(
+        function (){
+            $('#login-form').submit(function (){
+                $.ajax({
+                    url:'/login',
+                    method:'POST',
+                    data: $(this).serialize(),
+                    success:function (data){
+                        if (data.code==0){
+                            window.location.href = '/main';
+                        }else{
+                            $('#msg').text(data.msg);
+                        }
+                    },
+                    error:function (){
+                        $('#msg').text('登录失败');
+                    }
+
+
+                })
+                return false;
+            })
+        }
+    )
+
+
+</script>
+</body>
+</html>
