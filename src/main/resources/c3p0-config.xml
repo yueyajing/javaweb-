@@ -3,9 +3,9 @@
 <c3p0-config>
     <named-config name="localhost">
         <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
-        <property name="jdbcUrl">jdbc:oracle:thin:@localhost:1521:orcl</property>
-        <property name="user">C##BS001</property>
-        <property name="password">123456</property>
+        <property name="jdbcUrl">jdbc:oracle:thin:@localhost:1500:orcl</property>
+        <property name="user">C##BS001111</property>
+        <property name="password">12345678</property>
         <property name="acquireIncrement">5</property>
         <property name="initialPoolSize">100</property>
         <property name="minPoolSize">10</property>
@@ -19,15 +19,15 @@
     <named-config name="local">
         <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
         <property name="jdbcUrl">jdbc:oracle:thin:@localhost:1521:orcl</property>
-        <property name="user">system</property>
-        <property name="password">123456</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="checkoutTimeout">5000</property>
     </named-config>
     <named-config name="mid_hr">
         <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="jdbcUrl">jdbc:sqlserver://10.1.200.18:1433;database=ecology_db</property>
-        <property name="user">sa</property>
-        <property name="password">tuopuoa</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <!-- 连接池参数 -->
         <property name="initialPoolSize">10</property>
         <property name="maxActive" value="100" />
@@ -43,8 +43,8 @@
 
 
     <named-config name="physql">//
-        <property name="user">root@tp</property>
-        <property name="password">Top@0574</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="jdbcUrl">jdbc:mysql://6.6.6.16:54321/reportdb?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;serverTimezone=CST</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <!-- 如果池中数据连接不够时一次增长多少个 -->
@@ -64,8 +64,8 @@
     <named-config name="woqutech">
         <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
         <property name="jdbcUrl">jdbc:oracle:thin:@10.1.200.102:1521:woqutech2</property>
-        <property name="user">ecology</property>
-        <property name="password">ecology</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="acquireIncrement">5</property>
         <property name="initialPoolSize">100</property>
         <property name="minPoolSize">10</property>
@@ -79,8 +79,8 @@
     <named-config name="OA">
         <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
         <property name="jdbcUrl">jdbc:oracle:thin:@6.6.6.166:1521:ecology2</property>
-        <property name="user">ecology</property>
-        <property name="password">ecology</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="acquireIncrement">5</property>
         <property name="initialPoolSize">10</property>
         <property name="minPoolSize">5</property>
@@ -94,8 +94,8 @@
     <named-config name="XKP">
         <property name="driverClass">oracle.jdbc.driver.OracleDriver</property>
         <property name="jdbcUrl">jdbc:oracle:thin:@10.1.200.86:1521:ECARD</property>
-        <property name="user">CCENSE</property>
-        <property name="password">NewCapeC</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="acquireIncrement">5</property>
         <property name="initialPoolSize">10</property>
         <property name="minPoolSize">5</property>
@@ -108,8 +108,8 @@
 
 
     <named-config name="DH">
-        <property name="user">mysql</property>
-        <property name="password">S7EuWjGM</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_brm?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <!-- 如果池中数据连接不够时一次增长多少个 -->
@@ -126,8 +126,8 @@
     </named-config>
 
     <named-config name="DHMJ">
-        <property name="user">mysql</property>
-        <property name="password">S7EuWjGM</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_accesscontrol?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <!-- 如果池中数据连接不够时一次增长多少个 -->
@@ -144,8 +144,8 @@
     </named-config>
 
     <named-config name="DHXF">
-        <property name="user">mysql</property>
-        <property name="password">S7EuWjGM</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_consume?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false&amp;useSSL=false</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <!-- 如果池中数据连接不够时一次增长多少个 -->
@@ -162,8 +162,8 @@
     </named-config>
 
     <named-config name="DHKQ">
-        <property name="user">mysql</property>
-        <property name="password">S7EuWjGM</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <property name="jdbcUrl">jdbc:mysql://10.1.200.90:3306/evo_attendance?characterEncoding=UTF-8&amp;autoReconnect=true&amp;failOverReadOnly=false</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <!-- 如果池中数据连接不够时一次增长多少个 -->
@@ -182,8 +182,8 @@
     <named-config name="HR">
         <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="jdbcUrl">jdbc:sqlserver://192.1.3.45\sql2008;databaseName=V10_HR</property>
-        <property name="user">sa</property>
-        <property name="password">tuopuhr</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
         <!-- 连接池参数 -->
         <property name="initialPoolSize">10</property>
         <property name="maxActive" value="100" />
